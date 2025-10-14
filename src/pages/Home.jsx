@@ -35,18 +35,9 @@ export default function Home() {
 
   return (
     <>
-    <Header />
-      {/* <animated.div className="home-container" >
-        <img
-          src="https://media.licdn.com/dms/image/v2/D4D03AQEQe04aUxhNlQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1721960668271?e=1763596800&v=beta&t=noyMvmPuWgZkZUthzh01hNkRgGyIa6f2AULYHK47WkU"
-          alt="icon image"
-          className="home-avatar"
-        />
-        <header className="home-header">
-          <h1>João Almir</h1>
-          <p>Desenvolvedor Front-end | React | Vue</p>
-        </header>
-      </animated.div> */}
+    <Header scrollCount={scrollCount} />
+
+      
     </>
   );
 }
