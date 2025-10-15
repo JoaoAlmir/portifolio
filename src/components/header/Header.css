@@ -6,21 +6,22 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     position: fixed;
 }
 
-header .leftSide {
+header .header-leftSide {
     font-family: "Dancing Script", cursive;
     margin: 0;
     font-size: 1.5em;
-    padding: 3% 0 0 15%;
+    padding: 3% 0 0 8%;
 }
 
-header .rightSide {
+header .header-rightSide {
     color: white;
     padding: 3% 10% 0 0;
+    
 }
+
 
 header .menu-button {
     background: none;
@@ -59,5 +60,5 @@ header .menu a {
 }
 
 header .menu a:hover {
-    color: var(--accent, #00d8ff);
+    color: var(--accent, rgb(24, 34, 173));
 }

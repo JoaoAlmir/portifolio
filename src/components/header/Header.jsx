@@ -10,7 +10,7 @@ const Header = ({ scrollCount }) => {
 
   return (
     <header>
-      <div className="leftSide">
+      <div className="header-leftSide">
         <div className="title-wrapper">
           <AnimatePresence mode="wait">
             {scrollCount > 0 ? (
@@ -38,13 +38,13 @@ const Header = ({ scrollCount }) => {
         </div>
       </div>
 
-      <div className="rightSide">
+      <div className="header-rightSide">
         {/* BOTÃO DO MENU */}
         <button className="menu-button" onClick={toggleMenu}>
           {menuOpen ? <IoIosClose color="white" size={28} /> : <IoIosMenu color="white" size={28} />}
         </button>
 
-        {/* MENU FUNCIONAL */}
+        {/* MENU */}
         <AnimatePresence>
           {menuOpen && (
             <motion.nav

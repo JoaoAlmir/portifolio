@@ -1,0 +1,45 @@
+.presentation-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+}
+
+.presentation-leftSide {
+    flex: 1;
+    padding-left: 13%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.presentation-leftSide h1 {
+    font-size: 2.5em;
+    margin: 0 0 10px 0;
+}
+
+.presentation-rightSide {
+    flex: 1;
+    background-color: rgb(24, 34, 173);
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.presentation-rightSide img {
+    width: 60%;
+    border-radius: 50%;
+    border: 3px solid #eee;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    transition: transform 0.2s ease;
+    transform: scale(0.8);
+    transform: translateX(-22vw);
+}
+
