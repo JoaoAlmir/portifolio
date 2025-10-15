@@ -3,6 +3,7 @@ import { useSpring, animated } from "@react-spring/web";
 import "./Home.css";
 import Header from "../components/header/Header.jsx";
 import Presentation from "../components/presentation/Presetation.jsx";
+import Experience from "../components/experience/Experience.jsx";
 
 const projects = [
   {
@@ -39,6 +40,8 @@ export default function Home() {
     <Header scrollCount={scrollCount} />
 
     <Presentation />
+
+    <Experience />
     </>
   );
 }
