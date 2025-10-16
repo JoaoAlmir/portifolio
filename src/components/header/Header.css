@@ -7,6 +7,7 @@ header {
     align-items: center;
     justify-content: space-between;
     position: fixed;
+    z-index: 1000;
 }
 
 header .header-leftSide {
@@ -14,6 +15,11 @@ header .header-leftSide {
     margin: 0;
     font-size: 1.5em;
     padding: 3% 0 0 8%;
+}
+
+header .title-wrapper {
+    user-select: none;
+    cursor: pointer;
 }
 
 header .header-rightSide {

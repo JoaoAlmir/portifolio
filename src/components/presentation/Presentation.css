@@ -24,7 +24,7 @@
 
 .presentation-rightSide {
     flex: 1;
-    background-color: rgb(13, 16, 61);
+    background: linear-gradient(to left, rgb(0, 0, 0), rgb(56, 56, 56));
     height: 85vh;
     display: flex;
     flex-direction: column;

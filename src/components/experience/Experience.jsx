@@ -1,6 +1,6 @@
 import "./Experience.css";
 
-import image from "../../assets/experience_image.gif"
+import image from "../../assets/experienceGif.gif"
 const Experience = () => {
 
 

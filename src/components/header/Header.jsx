@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoIosMenu, IoIosClose } from "react-icons/io";
 import "./Header.css";
+import { useNavigate } from "react-router-dom";
 
-const Header = ({ scrollCount }) => {
+const Header = ({ scrollCount, setHome }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [textColor, setTextColor] = useState("white");
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  const nav = useNavigate();
 
   useEffect(() => {
     // muda a cor do texto de acordo com o scrollCount
@@ -21,7 +24,7 @@ const Header = ({ scrollCount }) => {
   return (
     <header>
       <div className="header-leftSide">
-        <div className="title-wrapper">
+        <div className="title-wrapper" onClick={() => {setHome();setTextColor("white");}}>
           <AnimatePresence mode="wait">
             {scrollCount > 0 ? (
               <motion.h1
@@ -64,9 +67,9 @@ const Header = ({ scrollCount }) => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <a href="#about" onClick={() => setMenuOpen(false)}>Sobre</a>
-              <a href="#projects" onClick={() => setMenuOpen(false)}>Projetos</a>
-              <a href="#contact" onClick={() => setMenuOpen(false)}>Contato</a>
+              <a onClick={() => { setMenuOpen(false); nav("/about"); }}>Sobre</a>
+              <a onClick={() => { setMenuOpen(false); nav("/projects"); }}>Projetos</a>
+              <a onClick={() => { setMenuOpen(false); nav("/contact"); }}>Contato</a>
             </motion.nav>
           )}
         </AnimatePresence>
