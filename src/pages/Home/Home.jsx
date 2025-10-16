@@ -142,8 +142,9 @@ export default function Home() {
             }}
             style={
               scrollCount === 4
-                
                 ? { backgroundColor: "purple", border: "2px solid #c5ff6a" }
+                : scrollCount === 2
+                ? { backgroundColor: "#092547" }
                 : {}
             }
             className={`home-scroll-dot${idx === scrollCount ? " active" : ""}`}

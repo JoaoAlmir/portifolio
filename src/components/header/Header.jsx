@@ -17,7 +17,7 @@ const Header = ({ scrollCount, setScroll}) => {
     if (scrollCount === 4) {
       setTextColor("#c5ff6a");
     }
-    else if (scrollCount > 0) {
+    else if (scrollCount > 0 && scrollCount != 2) {
       setTextColor("black");
     } 
     else {
