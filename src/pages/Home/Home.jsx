@@ -5,7 +5,8 @@ import Presentation from "../../components/presentation/Presetation.jsx";
 import Experience from "../../components/experience/Experience.jsx";
 import Project from "../../components/project/project.jsx";
 import { useNavigate } from "react-router-dom";
-import Email from "../../components/Email/Email.jsx";
+import Email from "../../components/email/Email.jsx";
+import Footer from "../../components/footer/Footer.jsx";
 
 export default function Home() {
   const [scrollCount, setScrollCount] = React.useState(0);
@@ -13,16 +14,18 @@ export default function Home() {
   const experienceRef = React.useRef(null);
   const projectsRef = React.useRef(null);
   const emailRef = React.useRef(null);
+  const footerRef = React.useRef(null);
+
+
   const isScrolling = React.useRef(false);
 
   const touchStartY = React.useRef(0);
   const touchEndY = React.useRef(0);
 
-  const MAX_SCROLL = 3;
-
+  const MAX_SCROLL = 4;
   const nav = useNavigate();
 
-  
+
 
   const scrollToSection = (index) => {
     if (index === 0) {
@@ -33,6 +36,8 @@ export default function Home() {
       projectsRef.current.scrollIntoView({ behavior: "smooth" });
     } else if (index === 3) {
       emailRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (index === 4) {
+      footerRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -115,6 +120,10 @@ export default function Home() {
 
       <div ref={emailRef}>
         <Email />
+      </div>
+
+      <div ref={footerRef}>
+        <Footer />
       </div>
     </>
   );

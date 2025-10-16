@@ -14,9 +14,13 @@ const Header = ({ scrollCount, setHome }) => {
 
   useEffect(() => {
     // muda a cor do texto de acordo com o scrollCount
-    if (scrollCount > 0) {
+    if (scrollCount === 4) {
+      setTextColor("#c5ff6a");
+    }
+    else if (scrollCount > 0) {
       setTextColor("black");
-    } else {
+    } 
+    else {
       setTextColor("white");
     }
   }, [scrollCount]);
