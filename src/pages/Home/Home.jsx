@@ -104,7 +104,13 @@ export default function Home() {
 
   return (
     <>
-      <Header scrollCount={scrollCount} setHome={() => { presentationRef.current.scrollIntoView({ behavior: "smooth" }); nav("/"); }} />
+      <Header
+        scrollCount={scrollCount}
+        setScroll={(index = 0) => {
+          scrollToSection(index);
+          nav("/");
+        }}
+      />
 
       <div ref={presentationRef}>
         <Presentation />

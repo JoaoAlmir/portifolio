@@ -4,7 +4,7 @@ import { IoIosMenu, IoIosClose } from "react-icons/io";
 import "./Header.css";
 import { useNavigate } from "react-router-dom";
 
-const Header = ({ scrollCount, setHome }) => {
+const Header = ({ scrollCount, setScroll}) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [textColor, setTextColor] = useState("white");
 
@@ -28,7 +28,7 @@ const Header = ({ scrollCount, setHome }) => {
   return (
     <header>
       <div className="header-leftSide">
-        <div className="title-wrapper" onClick={() => {setHome();setTextColor("white");}}>
+        <div className="title-wrapper" onClick={() => {setScroll(0);setTextColor("white");}}>
           <AnimatePresence mode="wait">
             {scrollCount > 0 ? (
               <motion.h1
@@ -71,9 +71,8 @@ const Header = ({ scrollCount, setHome }) => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <a onClick={() => { setMenuOpen(false); nav("/about"); }}>Sobre</a>
-              <a onClick={() => { setMenuOpen(false); nav("/projects"); }}>Projetos</a>
-              <a onClick={() => { setMenuOpen(false); nav("/contact"); }}>Contato</a>
+              <a onClick={() => { setMenuOpen(false); setScroll(2); }}>Projects</a>
+              <a onClick={() => { setMenuOpen(false); setScroll(4); }}>Contact</a>
             </motion.nav>
           )}
         </AnimatePresence>

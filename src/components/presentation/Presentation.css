@@ -9,12 +9,14 @@
 .presentation-leftSide {
     flex: 1;
     padding-left: 13%;
+    padding-right: 20%;
     height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     background-color: black;
+    color: white;
 }
 
 .presentation-leftSide h1 {
