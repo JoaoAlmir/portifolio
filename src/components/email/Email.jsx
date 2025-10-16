@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Email.css";
+import Language from "../../context/Language.jsx";
 
 const Email = () => {
+  const { language } = useContext(Language);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,13 +27,27 @@ const Email = () => {
     })
       .then((response) => {
         if (response.ok) {
-          toast.success("Mensagem enviada com sucesso!");
+          toast.success(
+            language === "en"
+              ? "Message sent successfully!"
+              : "Mensagem enviada com sucesso!"
+          );
           setFormData({ name: "", email: "", message: "" });
         } else {
-          toast.error("Erro ao enviar mensagem.");
+          toast.error(
+            language === "en"
+              ? "Error sending message."
+              : "Erro ao enviar mensagem."
+          );
         }
       })
-      .catch(() => toast.error("Erro ao enviar mensagem."));
+      .catch(() =>
+        toast.error(
+          language === "en"
+            ? "Error sending message."
+            : "Erro ao enviar mensagem."
+        )
+      );
   };
 
   return (
@@ -46,43 +63,95 @@ const Email = () => {
             style={{ display: "block" }}
           >
             <g>
-              <rect x="6" y="12" width="36" height="24" rx="4" fill="#fff" stroke="#21b16d" strokeWidth="2" />
-              <polyline points="6,12 24,28 42,12" fill="none" stroke="#139746" strokeWidth="2" />
+              <rect
+                x="6"
+                y="12"
+                width="36"
+                height="24"
+                rx="4"
+                fill="#fff"
+                stroke="#21b16d"
+                strokeWidth="2"
+              />
+              <polyline
+                points="6,12 24,28 42,12"
+                fill="none"
+                stroke="#139746"
+                strokeWidth="2"
+              />
             </g>
           </svg>
         </span>
 
-        <h2>Send me a message!</h2>
-        <h3>
-          Got a question or proposal, or just want to say hello? Go ahead.
-        </h3>
-        <form onSubmit={handleSubmit} className="email-form">
-          <input
-            type="text"
-            name="name"
-            placeholder="Your name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email address"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <textarea
-            name="message"
-            placeholder="Your message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            rows={5}
-          />
-          <button type="submit">Enviar</button>
-        </form>
+        {language === "en" ? (
+          <>
+            <h2>Send me a message!</h2>
+            <h3>
+              Got a question or proposal, or just want to say hello? Go ahead.
+            </h3>
+            <form onSubmit={handleSubmit} className="email-form">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email address"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Your message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={5}
+              />
+              <button type="submit">Send</button>
+            </form>
+          </>
+        ) : (
+          <>
+            <h2>Envie-me uma mensagem!</h2>
+            <h3>
+              Tem uma dúvida, proposta ou só quer dizer olá? Vá em frente.
+            </h3>
+            <form onSubmit={handleSubmit} className="email-form">
+              <input
+                type="text"
+                name="name"
+                placeholder="Seu nome"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Endereço de email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Sua mensagem"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={5}
+              />
+              <button type="submit">Enviar</button>
+            </form>
+          </>
+        )}
       </div>
       <ToastContainer position="top-center" autoClose={3000} />
     </div>

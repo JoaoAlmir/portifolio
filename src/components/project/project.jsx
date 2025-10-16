@@ -3,6 +3,8 @@ import "./project.css";
 import neon from "../../assets/neonFlix.png";
 import dopamina from "../../assets/dopamina.png";
 import clotilde from "../../assets/clotilde.png";
+import { useContext } from "react";
+import Language from "../../context/Language.jsx";
 
 const projectsData = [
     { id: 1, title: "Dopamina", img: dopamina, link: "https://dopamina-one.vercel.app/" },
@@ -17,14 +19,31 @@ const Project = () => {
         from: { opacity: 0, scale: 0.9 },
         config: { mass: 2, tension: 180, friction: 20 },
     });
+    const { language } = useContext(Language);
+
+
 
     return (
         <section className="project-container">
             <div className="project">
-                <h1>I build stuff</h1>
-                <h2>Open source
-                    projects, web apps
-                    and experimentals.</h2>
+                {language === "en" ? (
+                    <>
+                        <h1>I build stuff</h1>
+                        <h2>
+                            Open source projects, web apps
+                            and experimentals.
+                        </h2>
+                    </>
+                ) : (
+                    <>
+                        <h1>Eu construo coisas</h1>
+                        <h2>
+                            Projetos open source, web apps
+                            e experimentais.
+                        </h2>
+                    </>
+                )}
+
                 <div className="project-grid">
                     {trail.map((style, index) => {
                         const { id, title, img, link } = projectsData[index];

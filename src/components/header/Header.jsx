@@ -70,8 +70,8 @@ const Header = ({ scrollCount, setScroll }) => {
               exit={{ opacity: 0, y: 50 }}
               transition={{ duration: 0.3 }}
             >
-              <a onClick={() => { setMenuOpen(false); setScroll(2); }}>Projects</a>
-              <a onClick={() => { setMenuOpen(false); setScroll(4); }}>Contact</a>
+              <a onClick={() => { setMenuOpen(false); setScroll(2); }}>{language === "en" ? "Projects" : "Projetos"}</a>
+              <a onClick={() => { setMenuOpen(false); setScroll(4); }}>{language === "en" ? "Contact" : "Contato"}</a>
               <div className="lang-switch">
                 <div
                   className={`lang-button ${language === "en" ? "active" : ""}`}
