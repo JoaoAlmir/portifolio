@@ -1,5 +1,5 @@
 import "./Footer.css";
-import pdf from "../../assets/Curriculum João Almir Web.pdf";
+import pdf from "../../assets/Curriculum.pdf";
 
 const Footer = () => {
 

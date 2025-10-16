@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useTrail, animated } from "@react-spring/web";
 import './project.css';
-import { useNavigate } from "react-router-dom";
 import neon from '../../assets/neonFlix.png'
 import dopamina from '../../assets/dopamina.png'
 import clotilde from '../../assets/clotilde.png'
