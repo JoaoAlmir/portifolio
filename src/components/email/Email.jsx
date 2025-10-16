@@ -35,6 +35,23 @@ const Email = () => {
 
   return (
     <div className="email-container">
+
+      <span className="email-icon-animated" aria-label="Email Icon" role="img">
+        <svg
+          width="80"
+          height="80"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style={{ display: "block" }}
+        >
+          <g>
+            <rect x="6" y="12" width="36" height="24" rx="4" fill="#fff" stroke="#21b16d" strokeWidth="2"/>
+            <polyline points="6,12 24,28 42,12" fill="none" stroke="#139746" strokeWidth="2"/>
+          </g>
+        </svg>
+      </span>
+
       <h2>Send me a message!</h2>
       <h3>
         Got a question or proposal, or just want to say hello? Go ahead.
