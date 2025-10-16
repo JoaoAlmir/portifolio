@@ -66,6 +66,20 @@ header .menu a {
 }
 
 header .menu a:hover {
-    color: var(--accent, #13be2f);
-    /* cor de destaque ao passar o mouse */
+    color: var(--accent, #18a9d4);
+}
+
+.lang-switch{
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.lang-switch .active{
+    color: var(--accent, #18a9d4);
+}
+
+.lang-button{
+    cursor: pointer;
+    padding: 2px;
 }
