@@ -5,18 +5,20 @@ import Presentation from "../../components/presentation/Presetation.jsx";
 import Experience from "../../components/experience/Experience.jsx";
 import Project from "../../components/project/project.jsx";
 import { useNavigate } from "react-router-dom";
+import Email from "../../components/Email/Email.jsx";
 
 export default function Home() {
   const [scrollCount, setScrollCount] = React.useState(0);
   const presentationRef = React.useRef(null);
   const experienceRef = React.useRef(null);
   const projectsRef = React.useRef(null);
+  const emailRef = React.useRef(null);
   const isScrolling = React.useRef(false);
 
   const touchStartY = React.useRef(0);
   const touchEndY = React.useRef(0);
 
-  const MAX_SCROLL = 2;
+  const MAX_SCROLL = 3;
 
   const nav = useNavigate();
 
@@ -29,6 +31,8 @@ export default function Home() {
       experienceRef.current.scrollIntoView({ behavior: "smooth" });
     } else if (index === 2) {
       projectsRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (index === 3) {
+      emailRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -107,6 +111,10 @@ export default function Home() {
 
       <div ref={projectsRef}>
         <Project />
+      </div>
+
+      <div ref={emailRef}>
+        <Email />
       </div>
     </>
   );

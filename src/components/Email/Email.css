@@ -1,10 +1,22 @@
 .email-container {
-  max-width: 400px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
 }
 
 .email-container h2 {
+  font-size: 2.8rem;
+  color: #4caf50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.email-container h3 {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -21,6 +33,13 @@
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+  }
+
+  .email-form input:focus,
+  .email-form textarea:focus {
+    border-color: #4caf50;
 }
 
 .email-form button {
