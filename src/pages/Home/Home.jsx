@@ -132,8 +132,25 @@ export default function Home() {
         <Footer />
       </div>
 
-        
-
+      <div className="home-scroll-nav">
+        {[0, 1, 2, 3, 4].map((idx) => (
+          <div
+            key={idx}
+            onClick={() => {
+              scrollToSection(idx);
+              setScrollCount(idx);
+            }}
+            style={
+              scrollCount === 4
+                
+                ? { backgroundColor: "purple", border: "2px solid #c5ff6a" }
+                : {}
+            }
+            className={`home-scroll-dot${idx === scrollCount ? " active" : ""}`}
+            aria-label={`Ir para página ${idx + 1}`}
+          />
+        ))}
+      </div>
     </>
   );
 }
