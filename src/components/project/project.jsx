@@ -37,6 +37,7 @@ const Project = () => {
                 </div>}
 
                 {!expanded && (
+                    
                     <button onClick={() => setExpanded(true)}>See my work</button>
                 )}
 

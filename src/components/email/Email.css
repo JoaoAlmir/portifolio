@@ -7,6 +7,14 @@
   flex-direction: column;
   justify-content: center;
   
+  
+}
+
+.email-card{
+  border: 2px solid #4caf50;
+  padding: 6% 4%;
+  border-radius: 30px;
+  border-style: dashed;  
 }
 
 .email-container h2 {
