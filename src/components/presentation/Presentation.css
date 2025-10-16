@@ -26,7 +26,11 @@
 
 .presentation-rightSide {
     flex: 1;
-    background: linear-gradient(to left, rgb(0, 0, 0), rgb(56, 56, 56));
+    background: linear-gradient(270deg, rgb(0, 0, 0), rgb(10, 11, 17));
+    background-size: 400% 400%;
+    animation: gradientMove 6s ease infinite;
+
+
     height: 85vh;
     display: flex;
     flex-direction: column;

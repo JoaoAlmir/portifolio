@@ -66,9 +66,9 @@ const Header = ({ scrollCount, setScroll}) => {
           {menuOpen && (
             <motion.nav
               className="menu"
-              initial={{ opacity: 0, x: -80, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, x: -200, y: 100 }}
+              animate={{ opacity: 1, y: 25 }} 
+              exit={{ opacity: 0, y: 50 }} 
               transition={{ duration: 0.3 }}
             >
               <a onClick={() => { setMenuOpen(false); setScroll(2); }}>Projects</a>
