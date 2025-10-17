@@ -4,6 +4,8 @@ import { IoIosMenu, IoIosClose } from "react-icons/io";
 import "./Header.css";
 import { useContext } from "react";
 import Language from "../../context/Language.jsx";
+import pdf from "../../assets/Curriculum.pdf";
+
 
 const Header = ({ scrollCount, setScroll }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,6 +13,10 @@ const Header = ({ scrollCount, setScroll }) => {
   const { language, setLanguage } = useContext(Language);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  const abrirPDF = () => {
+      window.open(pdf, "_blank");
+    };
 
   useEffect(() => {
     if (scrollCount === 4) {
@@ -67,6 +73,7 @@ const Header = ({ scrollCount, setScroll }) => {
             >
               <a onClick={() => { setMenuOpen(false); setScroll(2); }}>{language === "en" ? "Projects" : "Projetos"}</a>
               <a onClick={() => { setMenuOpen(false); setScroll(4); }}>{language === "en" ? "Contact" : "Contato"}</a>
+              <a onClick={abrirPDF}>{language === "en" ? "Curriculum" : "Currículo"}</a>
               <div className="lang-switch">
                 <div
                   className={`lang-button ${language === "en" ? "active" : ""}`}
