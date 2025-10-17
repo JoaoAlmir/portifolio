@@ -125,3 +125,97 @@
     transform: rotate(45deg) scale(1.1);
     box-shadow: 0 2px 8px rgba(79,140,255,0.2);
 }
+
+/* =============================== */
+/*        🔹 MOBILE (até 768px)    */
+/* =============================== */
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 16px;
+  }
+
+  .home-header h1 {
+    font-size: 2rem;
+  }
+
+  .home-header p {
+    font-size: 0.95rem;
+    padding: 0 12px;
+  }
+
+  .home-avatar {
+    width: 90px;
+    height: 90px;
+    margin: 24px auto 12px auto;
+  }
+
+  .home-project-item {
+    padding: 12px;
+  }
+
+  .home-project-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .home-project-item p {
+    font-size: 0.9rem;
+  }
+
+  .home-footer {
+    font-size: 0.85rem;
+    margin-top: 32px;
+  }
+
+  /* Scroll dots menores e posicionados mais próximos da borda */
+  .home-scroll-nav {
+    bottom: 20%;
+    right: 5%;
+    gap: 10px;
+  }
+
+  .home-scroll-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Evita sobreposição com o conteúdo em telas pequenas */
+  .home-scroll-nav {
+    transform: scale(0.9);
+  }
+}
+
+/* =============================== */
+/*     🔹 TELAS MUITO PEQUENAS     */
+/* =============================== */
+
+@media (max-width: 480px) {
+  .home-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .home-header p {
+    font-size: 0.9rem;
+  }
+
+  .home-social-links a {
+    display: inline-block;
+    margin: 4px 6px;
+    font-size: 0.9rem;
+  }
+
+  .home-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .home-scroll-nav {
+    right: 4%;
+    bottom: 15%;
+  }
+
+  .home-scroll-dot {
+    width: 7px;
+    height: 7px;
+  }
+}

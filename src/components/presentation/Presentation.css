@@ -50,3 +50,53 @@
     transform: translateX(-22vw);
 }
 
+@media (max-width: 1024px) {
+  .presentation-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .presentation-leftSide {
+    height: auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .presentation-leftSide h1 {
+    font-size: 2em;
+  }
+
+  .presentation-leftSide h2 {
+    font-size: 1.1em;
+  }
+
+  .presentation-rightSide {
+    width: 100%;
+    height: auto;
+    padding: 5% 0;
+    align-items: center;
+  }
+
+  .presentation-rightSide img {
+    width: 50%;
+    transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .presentation-leftSide {
+    padding: 15% 5%;
+  }
+
+  .presentation-leftSide h1 {
+    font-size: 1.8em;
+  }
+
+  .presentation-leftSide h2 {
+    font-size: 1em;
+  }
+
+  .presentation-rightSide img {
+    width: 65%;
+  }
+}

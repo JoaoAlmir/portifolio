@@ -92,3 +92,80 @@
     transform: rotate(-8deg) translateY(0px);
   }
 }
+
+@media (max-width: 768px) {
+  .email-container {
+    padding: 16px;
+    height: auto;
+  }
+
+  .email-card {
+    padding: 24px 16px;
+    border-radius: 20px;
+  }
+
+  .email-container h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  .email-container h3 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    padding: 0 10px;
+  }
+
+  .email-form input,
+  .email-form textarea {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  .email-form button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .email-icon-animated svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .email-card {
+    padding: 20px 14px;
+  }
+
+  .email-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .email-container h3 {
+    font-size: 0.9rem;
+  }
+
+  .email-form input,
+  .email-form textarea {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .email-form textarea {
+    min-height: 120px;
+  }
+
+  .email-form button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .email-icon-animated {
+    margin-top: 20px;
+  }
+
+  .email-icon-animated svg {
+    width: 50px;
+    height: 50px;
+  }
+}

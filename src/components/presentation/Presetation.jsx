@@ -10,7 +10,7 @@ const Presentation = () => {
         <section className="presentation-container">
             <div className="presentation-leftSide">
                 <h1>
-                    {language === "pt" ? "Desenvolvedor Frontend." : "Frontend Developer."}
+                    {language === "pt" ? "Desenvolvedor." : "Developer."}
                 </h1>
                 <h2>
                     {language === "pt"

@@ -47,3 +47,59 @@
     transition: transform 0.2s ease;
     transform: scale(1);
 }
+
+@media (max-width: 1024px) {
+  .experience-container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 40px 5%;
+  }
+
+  .experience-content {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .experience-content h1 {
+    font-size: 2.2em;
+  }
+
+  .experience-content p {
+    width: 90%;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  .experience-image {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .experience-image img {
+    width: 85%;
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-container {
+    padding: 20px 4%;
+  }
+
+  .experience-content h1 {
+    font-size: 1.8em;
+  }
+
+  .experience-content p {
+    font-size: 0.95em;
+  }
+
+  .experience-image img {
+    width: 90%;
+    border-radius: 15px;
+  }
+}

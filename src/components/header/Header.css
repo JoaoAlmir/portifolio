@@ -83,3 +83,69 @@ header .menu a:hover {
     cursor: pointer;
     padding: 2px;
 }
+
+@media (max-width: 1024px) {
+  header {
+    height: 60px;
+    padding: 0 5%;
+  }
+
+  header .header-leftSide {
+    font-size: 1.3em;
+    padding: 2% 0 0 5%;
+  }
+
+  header .header-rightSide {
+    padding: 2% 5% 0 0;
+  }
+
+  header .menu {
+    top: 50px;
+    right: 10px;
+    padding: 0.8rem 1.2rem;
+    gap: 0.6rem;
+  }
+
+  header .menu a {
+    font-size: 1rem;
+  }
+
+  .lang-switch {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    height: 55px;
+  }
+
+  header .header-leftSide {
+    font-size: 1.1em;
+    padding-left: 3%;
+  }
+
+  header .header-rightSide {
+    padding-right: 3%;
+  }
+
+  header .menu {
+    top: 45px;
+    right: 5px;
+    padding: 0.6rem 1rem;
+    gap: 0.5rem;
+  }
+
+  header .menu a {
+    font-size: 0.9rem;
+  }
+
+  .lang-switch {
+    font-size: 0.8rem;
+  }
+
+  .menu-button svg {
+    width: 28px;
+    height: 28px;
+  }
+}
