@@ -1,105 +1,124 @@
 .experience-container {
-    padding: 0 10% 0 0;
-    background-color: white;
-    height: 100vh;
-    width: 100vw;
-    color: black;
-    display: flex;
-    
+  background-color: white;
+  height: 100vh;
+  color: black;
+  display: flex;
+  overflow-x: hidden; /* previne empurrão lateral */
 }
 
 .experience-content {
-    padding: 5% 0 0 15%;
-    background-color: white;
-    width: 30vw;
-    color: black;
-    display: flex;
-    flex-direction: column;
-
+  padding: 5% 0 0 15%;
+  background-color: white;
+  width: 30vw;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.8vh;
 }
 
 .experience-content h1 {
-    font-size: 2.8em;
-    margin: 0 0 10px 0;
+  font-size: 2.8em;
+  margin: 0 0 10px 0;
 }
 
 .experience-content p {
-    font-size: 1.1em;
-    line-height: 1.6;
+  font-size: 1.1em;
+  line-height: 1.6;
 }
 
-.experience-image{
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.experience-image {
+  width: 50vw;
+  height: auto; /* ajusta automaticamente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .experience-image img {
-    width: 80%;
-    border-radius: 20px;
-    border: 3px solid #eee;
-    object-fit: cover;
-    display: block;
-    margin: auto;
-    transition: transform 0.2s ease;
-    transform: scale(1);
+  width: 70%; /* menor que antes */
+  max-height: 80vh; /* limita altura */
+  border-radius: 20px;
+  border: 3px solid #eee;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+  transition: transform 0.2s ease;
+  transform: scale(1);
 }
 
+/* Tablet */
 @media (max-width: 1024px) {
   .experience-container {
     flex-direction: column;
     align-items: center;
     height: auto;
-    padding: 40px 5%;
+    width: 100%;
   }
 
   .experience-content {
-    width: 100%;
+    width: 80%;
     padding: 0;
+    padding-top: 20px;
     text-align: center;
   }
 
   .experience-content h1 {
-    font-size: 2.2em;
+    font-size: 2em;
   }
 
   .experience-content p {
-    width: 90%;
     font-size: 1em;
     line-height: 1.5;
   }
 
   .experience-image {
-    width: 100%;
+    width: 90%;
     height: auto;
     margin-top: 30px;
   }
 
   .experience-image img {
-    width: 85%;
-    max-width: 400px;
+    width: 80%;
+    max-width: 350px;
     height: auto;
   }
 }
 
+/* Mobile */
 @media (max-width: 600px) {
   .experience-container {
-    padding: 20px 4%;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+    height: auto; /* ajusta à altura do conteúdo */
+  }
+
+  .experience-content {
+    width: 80%;
+    padding: 0;
+    padding-top: 20px;
+    text-align: center;
   }
 
   .experience-content h1 {
-    font-size: 1.8em;
+    font-size: 1.6em; /* menor para mobile */
   }
 
   .experience-content p {
-    font-size: 0.95em;
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+
+  .experience-image {
+    width: 100%;
+    margin-top: 20px;
+    height: auto; /* ajusta à imagem */
   }
 
   .experience-image img {
-    width: 90%;
+    width: 80%;
+    max-width: 300px; /* limita tamanho */
+    height: auto;
     border-radius: 15px;
   }
 }

@@ -14,8 +14,8 @@ const Presentation = () => {
                 </h1>
                 <h2>
                     {language === "pt"
-                        ? "Gosto de criar projetos frontend limpos e funcionais que proporcionam uma boa experiência ao usuário."
-                        : "I like creating clean and functional frontend projects that provide a good user experience."}
+                        ? "Gosto de criar projetos limpos e funcionais que proporcionam uma boa experiência ao usuário."
+                        : "I like creating clean and functional projects that provide a good user experience."}
                 </h2>
             </div>
             <div className="presentation-rightSide">

@@ -61,14 +61,9 @@ const Header = ({ scrollCount, setScroll }) => {
           {menuOpen ? <IoIosClose color={textColor} size={34} /> : <IoIosMenu color={textColor} size={34} />}
         </button>
 
-        <AnimatePresence>
           {menuOpen && (
-            <motion.nav
+            <div
               className="menu"
-              initial={{ opacity: 0, x: -200, y: 100 }}
-              animate={{ opacity: 1, y: 25 }}
-              exit={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.3 }}
             >
               <a onClick={() => { setMenuOpen(false); setScroll(2); }}>{language === "en" ? "Projects" : "Projetos"}</a>
               <a onClick={() => { setMenuOpen(false); setScroll(4); }}>{language === "en" ? "Contact" : "Contato"}</a>
@@ -86,9 +81,8 @@ const Header = ({ scrollCount, setScroll }) => {
                   PT
                 </div>
               </div>
-            </motion.nav>
+            </div>
           )}
-        </AnimatePresence>
       </div>
     </header>
   );
