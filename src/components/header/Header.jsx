@@ -73,7 +73,7 @@ const Header = ({ scrollCount, setScroll }) => {
             >
               <a onClick={() => { setMenuOpen(false); setScroll(2); }}>{language === "en" ? "Projects" : "Projetos"}</a>
               <a onClick={() => { setMenuOpen(false); setScroll(4); }}>{language === "en" ? "Contact" : "Contato"}</a>
-              <a onClick={abrirPDF}>{language === "en" ? "Curriculum" : "Currículo"}</a>
+              <a onClick={abrirPDF}>{language === "en" ? "Resume" : "Currículo"}</a>
               <div className="lang-switch">
                 <div
                   className={`lang-button ${language === "en" ? "active" : ""}`}
